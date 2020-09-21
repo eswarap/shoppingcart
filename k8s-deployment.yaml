@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: shoppingcart
+  name: shoppingcart
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shoppingcart
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: shoppingcart
+    spec:
+      containers:
+      - image: shoppingcart
+        name: shoppingcart
+        resources: {}
+status: {}

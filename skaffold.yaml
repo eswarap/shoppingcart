@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2beta5
+kind: Config
+metadata:
+  name: shoppingcart
+build:
+  artifacts:
+  - image: shoppingcart
+deploy:
+  kubectl:
+    manifests:
+    - k8s-*.yaml
